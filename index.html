@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>A little secret 💌</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,400;0,600;1,400&family=Caveat:wght@500;700&family=Nunito:wght@400;700;800&family=Bungee&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="fake.css">
+</head>
+<body>
+<div id="hearts" aria-hidden="true"></div>
+
+<!-- Scene 1 -->
+<section class="scene on" id="s-lock">
+  <div class="center glass card pop">
+    <span class="deco" style="top:-18px;left:-10px">🎀</span><span class="deco" style="top:-14px;right:-8px;animation-delay:1s">🌸</span><span class="deco" style="bottom:-16px;left:14px;animation-delay:2s">✨</span><span class="deco" style="bottom:-16px;right:18px;animation-delay:.5s">⭐</span>
+    <h1>A little secret awaits… 💌</h1>
+    <p class="sub">Only someone special can open this.</p>
+    <div class="field" id="field">
+      <input id="pw" type="password" placeholder="Secret word" autocomplete="off" autocapitalize="none" aria-label="Password">
+      <button class="eye" id="eye" aria-label="Show password">👁️</button>
+    </div>
+    <button class="btn" id="unlock">Unlock 🔓</button>
+    <p class="msg" id="err" role="alert"></p>
+  </div>
+</section>
+
+<!-- Scene 2 -->
+<section class="scene" id="s-ask">
+  <div class="center">
+    <div class="glass card">
+      <span class="big beat">💗</span>
+      <h2>Do you like me? 🥺💕</h2>
+      <div class="pair" id="pair">
+        <button class="btn" id="yes">YES 💗</button>
+        <button class="btn alt" id="no">NO 😭</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="scene" id="s-no">
+  <div class="center glass card">
+    <span class="big sad">💔</span>
+    <h2>Whyyyyy😭😭👉🏻👈🏻</h2>
+    <p class="sub">The little heart is very sad now…(podi ngomma)</p>
+    <button class="btn" id="back">Okay, reconsider? 🥹</button>
+  </div>
+</section>
+
+<section class="scene" id="s-yes">
+  <div class="center glass card">
+    <span class="big beat">😋</span>
+    <h2>i knoww it alreadyy😋</h2>
+    <p class="sub">Hehe. I have something to show you…</p>
+    <button class="btn" id="toAlbum">See my favourites 📸</button>
+  </div>
+</section>
+
+<!-- Scene 3 -->
+<section class="scene" id="album">
+  <div class="lights" id="lights" aria-hidden="true"></div>
+  <div class="title"><h1>My favourite pics of my favourite person 💕</h1><p>tap a photo to see it closer</p></div>
+  <div class="wall" id="wall"></div>
+  <button class="btn next" id="toLetter">One last thing 💌</button>
+</section>
+
+<!-- Scene 4 -->
+<section class="scene" id="s-letter">
+  <div style="margin:auto;width:100%;text-align:center">
+    <div id="envWrap">
+      <button class="env" id="env" aria-label="Open the letter"><span class="back"></span><span class="flap"></span><span class="seal">💗</span><span class="front"></span></button>
+      <p class="hint">tap the envelope</p>
+    </div>
+    <div class="glass" id="paper">
+      <h2>A little something from my heart 💌</h2>
+      <p id="words"></p>
+      <div class="fin beat">💗</div>
+    </div>
+  </div>
+</section>
+
+<!-- Fake (ragebait) experience -->
+<section class="scene" id="s-fake">
+  <div class="fk">
+    <div class="fk-top"><span>🎁 SURPRISE.EXE</span><span id="fkpct">0%</span></div>
+    <div class="fk-st on" id="fk1">
+      <h2 class="fk-h">PREPARING YOUR SURPRISE…</h2>
+      <div class="fk-track"><div id="fkfill"></div></div>
+      <p class="fk-log" id="fkmsg">&gt; booting…</p>
+      <button class="fk-btn alt" id="fkskip" hidden>Skip loading ⏭</button>
+    </div>
+    <div class="fk-st" id="fk2">
+      <h2 class="fk-h">🎉 SURPRISE!! 🎉</h2>
+      <p class="fk-p">I made you an entire website. Ready for your gift?</p>
+      <button class="fk-btn" id="fkgift">🎁 OPEN IT</button>
+    </div>
+    <div class="fk-st" id="fk3">
+      <div class="fk-box" id="fkbox">🎁</div>
+      <p class="fk-log" id="fkdrum">&gt; drumroll…</p>
+      <h2 class="fk-h" id="fkres" hidden>A SPOON 🥄</h2>
+      <p class="fk-p" id="fkres2" hidden>Yes. Just a spoon. Stainless. Premium. Yours forever.</p>
+      <button class="fk-btn" id="fkwhat" hidden>Wait… that’s it?? 😤</button>
+    </div>
+    <div class="fk-st" id="fk4">
+      <div class="fk-credits"><div class="roll">
+        <p>A FILM BY<br><b>ME</b></p><p>STARRING<br><b>YOUR DISAPPOINTMENT</b></p>
+        <p>BEST SUPPORTING ROLE<br><b>THE SPOON 🥄</b></p><p>NO HEARTS WERE HARMED<br>IN THE MAKING OF THIS</p>
+        <p>SPECIAL THANKS<br><b>YOU, FOR FALLING FOR IT</b></p>
+      </div></div>
+      <div class="fk-end" id="fkend" hidden>
+        <h2 class="fk-h">THE END 🎬</h2>
+        <p class="fk-p">You can close this tab now. Or…</p>
+        <button class="fk-btn alt" id="fkagain">Watch again 🔁</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Lightbox -->
+<div id="lb" role="dialog" aria-modal="true" aria-label="Photo viewer">
+  <button class="nav" id="cls" aria-label="Close">✕</button>
+  <button class="nav" id="prev" aria-label="Previous photo">‹</button>
+  <figure id="fig"></figure>
+  <button class="nav" id="nxt" aria-label="Next photo">›</button>
+</div>
+
+<!-- Music -->
+<div id="music" class="glass" hidden>
+  <div class="disc" aria-hidden="true"></div>
+  <div class="t"><span id="song"></span><small id="state">tap play for our song</small></div>
+  <div class="eq" aria-hidden="true"><i></i><i></i><i></i></div>
+  <button id="pp" aria-label="Play music">▶</button>
+  <audio id="au" preload="none" loop></audio>
+</div>
+<script src="config.js"></script>
+<script src="script.js"></script>
+<script src="fake.js"></script>
+</body>
+</html>
